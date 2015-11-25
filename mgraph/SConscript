@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/mgraph', Split("""bond.cpp atom.cpp residuetype.cpp graph.cpp MOL2.cpp"""))

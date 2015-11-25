@@ -1,0 +1,4 @@
+Import('env')
+
+env.Library('#build/math', Split("""osg/Matrixd.cpp osg/Matrixf.cpp osg/Quat.cpp osg/Notify.cpp"""))
+

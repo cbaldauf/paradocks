@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/pmf04', Split("""pmf04.cpp parameter.cpp"""))

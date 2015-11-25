@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/hbee', Split("""HoneyBee.cpp"""))

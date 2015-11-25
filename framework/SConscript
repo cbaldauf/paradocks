@@ -1,0 +1,13 @@
+Import('env')
+
+optenv=env.Clone()
+if not optenv.GetOption('clean'):
+	conf = Configure(optenv)
+	if not conf.CheckLibWithHeader('xerces-c', 'xercesc/util/XercesVersion.hpp', language='C++'):
+		print 'Xerces-C++ must be installed!'
+		Exit(1)
+	optenv = conf.Finish()
+
+
+optenv.Append(LIBS=Split("""pso random random_hill_climbing hbee mgraph fitness pmf04 pscore math"""))
+optenv.Program('#paradocks', Split("""main.cpp ParadocksConfig.cpp Paradocks.cpp"""))

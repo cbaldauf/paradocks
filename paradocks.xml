@@ -1,0 +1,36 @@
+<paradocks> <!-- root node -->
+  <optimizer type="pso"> <!-- type of the optimizer (cpso as example) -->
+    <par val="150000"/> <!-- iterations -->
+    <par val="20"/> <!-- particle count -->
+    <par val="1"/> <!-- constricting inertia start -->
+    <par val="0.2"/> <!-- constricting inertia end -->
+    <par val="1"/> <!-- cognitive weight -->
+    <par val="3.4"/> <!-- social weight -->
+    <!-- the number of parameter is not restricted -->
+    <!-- but it has to be equal to the number of paramters which the optimizer expects -->
+  </optimizer>
+  <fitness type="pscore"> <!-- type of the fitness function -->
+  </fitness>
+  <input>
+    <!-- protein input with coordinates and radius of the active site -->
+	<protein file="/home/rene/astex_diverse_set/1sq5/protein.mol2" x="53.7351" y="-41.3871" z="2.92896" rad="15"/>
+	<!-- arbitrary number of ligand files with index for multi mol2 files -->
+    <ligand file="/home/rene/astex_diverse_set/1sq5/ligand.mol2" idx="1"/>
+  </input>
+  <configuration>
+    <!-- random seed, 0 means seed with system time -->
+    <random seed="0"/>
+    <!-- number of consecutive runs -->
+    <runs val="30"/>
+  </configuration>
+  <output>
+    <!-- every run will create a outputfile -->
+    <!-- the name is prefix_protein_ligand_idx_run.xml -->
+    <!-- output during each iteration, posible values are: none, best, all -->
+    <iteration val="none"/>
+    <!-- structure output at the end, posible values are: best, all-->
+    <end val="best"/>
+    <!--prefix for the output files-->
+    <prefix val="./result"/>
+  </output>
+</paradocks>

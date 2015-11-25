@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/nealder_mead', Split("""nelder_mead.cpp"""))

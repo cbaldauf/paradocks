@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/random', Split("""random.cpp"""))

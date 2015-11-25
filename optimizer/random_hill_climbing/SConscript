@@ -1,0 +1,3 @@
+Import('env')
+
+env.Library('#build/random_hill_climbing', Split("""random_hill_climbing.cpp"""))
