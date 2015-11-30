@@ -1,4 +1,5 @@
-# PARADOCKS - The parallel docking suite
+# PARADOCKS
+# The parallel docking suite
 
 Paradocks is a tool for molecular docking with poulation-based metaheuristics.
 
