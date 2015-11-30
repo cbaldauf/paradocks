@@ -1,5 +1,7 @@
 # PARADOCKS - The parallel docking suite
 
+![Logo](http://www.fhi-berlin.mpg.de/~baldauf/paradocks-logo.png)
+
 Paradocks is a tool for molecular docking with population-based metaheuristics.
 
 ## Scientific publications:
